@@ -50,11 +50,11 @@ export default function OnboardingScreen() {
   };
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: '#FFFFFF' }} edges={['top', 'bottom']}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: theme.background }} edges={['top', 'bottom']}>
       {/* Skip Button */}
       <View style={{ flexDirection: 'row', justifyContent: 'flex-end', paddingHorizontal: 24, paddingTop: 16 }}>
         <TouchableOpacity onPress={handleSkip}>
-          <Text style={{ fontSize: 16, fontWeight: '600', color: '#6B7280' }}>Skip</Text>
+          <Text style={{ fontSize: 16, fontWeight: '600', color: theme.textSecondary }}>Skip</Text>
         </TouchableOpacity>
       </View>
 
@@ -69,10 +69,10 @@ export default function OnboardingScreen() {
         </LinearGradient>
 
         {/* Text */}
-        <Text style={{ fontSize: 28, fontWeight: '800', color: '#111827', textAlign: 'center', marginBottom: 16, lineHeight: 36 }}>
+        <Text style={{ fontSize: 28, fontWeight: '800', color: theme.textPrimary, textAlign: 'center', marginBottom: 16, lineHeight: 36 }}>
           {slides[step].title}
         </Text>
-        <Text style={{ fontSize: 16, color: '#6B7280', textAlign: 'center', lineHeight: 24, paddingHorizontal: 16 }}>
+        <Text style={{ fontSize: 16, color: theme.textSecondary, textAlign: 'center', lineHeight: 24, paddingHorizontal: 16 }}>
           {slides[step].desc}
         </Text>
       </View>
@@ -88,7 +88,7 @@ export default function OnboardingScreen() {
                 height: 8,
                 width: idx === step ? 32 : 8,
                 borderRadius: 4,
-                backgroundColor: idx === step ? '#2563EB' : '#E5E7EB'
+                backgroundColor: idx === step ? theme.primary : theme.border
               }}
             />
           ))}
