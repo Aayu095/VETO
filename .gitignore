@@ -1,0 +1,31 @@
+# Global
+node_modules/
+.DS_Store
+*.log
+.env
+.env.*
+!.env.example
+
+# Backend (Python)
+backend/__pycache__/
+backend/*.pyc
+backend/venv/
+backend/.pytest_cache/
+
+# Contracts (Hardhat)
+contracts/artifacts/
+contracts/cache/
+contracts/typechain-types/
+contracts/coverage/
+contracts/coverage.json
+
+# Web (Next.js)
+web/.next/
+web/out/
+web/build/
+web/.vercel/
+
+# Mobile (Expo)
+mobile/.expo/
+mobile/web-build/
+mobile/dist/

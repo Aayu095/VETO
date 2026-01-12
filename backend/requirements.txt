@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+web3
+pydantic
+python-dotenv
+
+# AI Agent Dependencies
+langchain
+langchain-google-genai
+langchain-groq
+google-generativeai
