@@ -68,7 +68,7 @@ VETO is an **AI-powered payment layer** that gives you **time to think** before 
 |-------|-----------|
 | **Frontend (Web)** | Next.js 16, React 19, TailwindCSS, RainbowKit |
 | **Mobile App** | React Native (Expo 54), TypeScript, NativeWind |
-| **AI Backend** | Python 3.10, FastAPI, Custom ML Models |
+| **AI Backend** | Python 3.10, FastAPI, LangChain, Gemini 2.5 Flash |
 | **Blockchain** | Solidity, Hardhat, Ethereum/MNEE, ethers.js |
 
 </div>
@@ -84,7 +84,7 @@ VETO is an **AI-powered payment layer** that gives you **time to think** before 
 
 ### 📱 **FASTEST WAY TO TEST (Recommended)**
 
-**Mobile App Demo (2 minutes setup):**
+**Mobile App Demo - Android Only (2 minutes setup):**
 ```bash
 # 1. Clone the repo
 git clone https://github.com/Aayu095/VETO.git
@@ -93,17 +93,20 @@ cd VETO/mobile
 # 2. Install dependencies
 npm install
 
-# 3. Start the app
+# 3. Start the app (mobile-only, no web bundling)
 npx expo start --tunnel
 ```
 
 **What you'll see:**
 - A QR code will appear in your terminal
-- Open **Expo Go** app on your phone
+- Open **Expo Go** app on your Android phone
 - Scan the QR code
 - The VETO app will load on your phone!
 
-**Note:** Your terminal must stay open while testing.
+**Important Notes:**
+- ✅ This is a **mobile-only app** (Android)
+- ✅ No web version - judges must use Expo Go
+- ⚠️ Your terminal must stay open while testing
 
 ---
 

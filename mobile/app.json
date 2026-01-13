@@ -24,9 +24,6 @@
       "predictiveBackGestureEnabled": false,
       "package": "com.veto.app"
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    },
     "plugins": [
       "expo-router"
     ],
