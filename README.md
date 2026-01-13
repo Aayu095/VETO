@@ -11,7 +11,7 @@
 [![Expo](https://img.shields.io/badge/Expo-54-blue)](https://expo.dev/)
 [![Python](https://img.shields.io/badge/Python-3.10-green)](https://python.org/)
 
-[🌐 Live Demo](https://veto-sable.vercel.app) • [📱 Download APK](#) • [📖 Docs](./DEPLOYMENT.md)
+[🌐 Live Demo](https://veto-sable.vercel.app)
 
 </div>
 
@@ -75,58 +75,125 @@ VETO is an **AI-powered payment layer** that gives you **time to think** before 
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Quick Start for Judges
 
-### Prerequisites
-- Node.js 18+
-- Python 3.10+
-- Expo Go app (for mobile)
+### ⚠️ Prerequisites (Install These First)
+- **Node.js 18+** - [Download here](https://nodejs.org/)
+- **Python 3.10+** - [Download here](https://www.python.org/downloads/)
+- **Expo Go app** - [Download for Android](https://play.google.com/store/apps/details?id=host.exp.exponent)
 
-### 1️⃣ Clone & Install
+### 📱 **FASTEST WAY TO TEST (Recommended)**
+
+**Mobile App Demo (2 minutes setup):**
 ```bash
+# 1. Clone the repo
 git clone https://github.com/Aayu095/VETO.git
-cd VETO
-```
+cd VETO/mobile
 
-### 2️⃣ Run Web App
-```bash
-cd web
+# 2. Install dependencies
 npm install
-npm run dev
-# Open http://localhost:3000
+
+# 3. Start the app
+npx expo start --tunnel
 ```
 
-### 3️⃣ Run Mobile App
-```bash
-cd mobile
-npm install
-npx expo start
-# Scan QR code with Expo Go
-```
+**What you'll see:**
+- A QR code will appear in your terminal
+- Open **Expo Go** app on your phone
+- Scan the QR code
+- The VETO app will load on your phone!
 
-### 4️⃣ Run AI Backend
-```bash
-cd backend
-pip install -r requirements.txt
-python main.py
-# API at http://localhost:8000
-```
-
-**Full deployment guide:** [DEPLOYMENT.md](./DEPLOYMENT.md)
+**Note:** Your terminal must stay open while testing.
 
 ---
+
+### 🌐 **Web App Setup (3 minutes)**
+
+```bash
+# Navigate to web folder
+cd web
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+**Open in browser:** http://localhost:3000
+
+**What you'll see:**
+- Landing page with VETO branding
+- "Download App" button
+- Features showcase
+- Vault dashboard (connect wallet to test)
+
+---
+
+### 🤖 **AI Backend Setup (Optional - 5 minutes)**
+
+```bash
+# Navigate to backend folder
+cd backend
+
+# Install Python dependencies
+pip install -r requirements.txt
+
+# Start the API server
+python main.py
+```
+
+**API will run at:** http://localhost:8000
+
+**What it does:**
+- Analyzes transaction patterns
+- Detects fraud signals (penny drops, fresh wallets)
+- Returns risk scores to mobile app
+
+**Note:** Mobile app works without backend (uses mock data for demo)
+
+---
+
+### 🔧 **Troubleshooting**
+
+**Problem: "npm install" fails**
+```bash
+# Clear cache and retry
+npm cache clean --force
+npm install
+```
+
+**Problem: "Expo Go can't connect"**
+```bash
+# Use tunnel mode for better connectivity
+npx expo start --tunnel
+```
+
+**Problem: Python dependencies fail**
+```bash
+# Use a virtual environment
+python -m venv venv
+venv\Scripts\activate  # Windows
+pip install -r requirements.txt
+```
+
+**Problem: Port already in use**
+```bash
+# Web: Change port in package.json or kill process on 3000
+# Backend: Change port in main.py or kill process on 8000
+```
 
 ## 🎯 Demo Scenario
 
 **The Penny Drop Scam (Prevented)**
 
-1. 💸 Scammer sends you 1 MNEE to build trust
-2. 📞 Scammer calls: "I sent ₹18,000 by mistake! Send it back!"
-3. 🚨 **You try to send ₹18,000**
-4. 🛡️ **VETO AI detects the pattern**
-5. 🔒 **Funds locked in vault (not sent to scammer)**
-6. ⏱️ **You have 24 hours to click "Undo"**
-7. ✅ **Money returned to your wallet**
+1. Scammer sends you 1 MNEE to build trust
+2. Scammer calls: "I sent ₹18,000 by mistake! Send it back!"
+3. You try to send ₹18,000
+4. VETO AI detects the pattern
+5. Funds locked in vault (not sent to scammer)
+6. You have 24 hours to click "Undo"
+7. Money returned to your wallet
 
 **Without VETO:** ₹18,000 lost forever.  
 **With VETO:** ₹18,000 saved.
