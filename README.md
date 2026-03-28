@@ -218,7 +218,7 @@ veto-project/
 
 ## 🤝 Contributing
 
-We welcome contributions! This is an open-source project built for the MNEE Hackathon 2026.
+We welcome contributions! 
 
 1. Fork the repo
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
@@ -231,12 +231,6 @@ We welcome contributions! This is an open-source project built for the MNEE Hack
 ## 📄 License
 
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 🏆 Built For
-
-**MNEE Hackathon 2026** | Track: Financial Automation
 
 ---
 
