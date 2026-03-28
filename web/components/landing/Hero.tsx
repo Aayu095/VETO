@@ -1,115 +1,161 @@
 "use client";
 
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle2, ShieldAlert } from "lucide-react";
-import { useScrollAnimation, fadeIn, fadeInVisible } from "@/lib/animations";
+import { Apple, Play } from "lucide-react";
 
 export function Hero() {
-    const contentAnim = useScrollAnimation(0.2);
-    const mockupAnim = useScrollAnimation(0.2);
 
     return (
-        <section className="relative pt-24 pb-20 md:pt-32 md:pb-32 overflow-hidden bg-white">
-            {/* Background Gradients */}
-            <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
-                <div className="absolute -top-[20%] -right-[10%] w-[800px] h-[800px] bg-blue-50/50 rounded-full blur-3xl opacity-70"></div>
-                <div className="absolute top-[40%] -left-[10%] w-[600px] h-[600px] bg-slate-50/50 rounded-full blur-3xl opacity-70"></div>
-            </div>
-
-            <div className="container relative z-10 px-6 md:px-12 grid lg:grid-cols-2 gap-12 items-center">
-                {/* Text Content */}
+        <section className="relative z-10 min-h-screen pt-[120px] pb-[80px] overflow-hidden flex items-center">
+            <div className="max-w-[1400px] w-full mx-auto px-6 md:px-[60px] flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-24">
+                <div className="flex-1 max-w-[580px] relative z-[2] shrink-0">
                 <div
-                    ref={contentAnim.ref}
-                    className={`space-y-8 ${fadeIn} ${contentAnim.isVisible ? fadeInVisible : ''}`}
+                    className="inline-flex items-center gap-2 bg-[rgba(46,204,143,0.1)] border border-[rgba(46,204,143,0.3)] rounded-full px-4 py-1.5 mb-7 slide-up opacity-0 [animation-delay:200ms]"
                 >
-                    <h1 className="text-5xl font-extrabold tracking-tight text-slate-900 sm:text-6xl lg:text-7xl leading-[1.1]">
-                        The payment layer that <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">says No</span> for you.
-                    </h1>
-
-                    <p className="max-w-[600px] text-lg text-slate-500 leading-relaxed">
-                        Stop Authorized Push Payment (APP) fraud before it settles. VETO uses AI to intercept risky transfers and move them to a secure Time-Lock Vault.
-                    </p>
-
-                    <div className="flex flex-col sm:flex-row gap-4">
-                        <Link href="/download">
-                            <Button size="lg" className="h-14 px-8 text-base bg-slate-900 hover:bg-slate-800 text-white rounded-full w-full sm:w-auto">
-                                Protect Your Wallet
-                            </Button>
-                        </Link>
-                        <Link href="#how-it-works">
-                            <Button size="lg" variant="outline" className="h-14 px-8 text-base rounded-full border-slate-200 text-slate-600 hover:bg-slate-50 w-full sm:w-auto">
-                                How VETO Works <ArrowRight className="ml-2 h-4 w-4" />
-                            </Button>
-                        </Link>
-                    </div>
-
-                    <div className="pt-4 flex items-center gap-6 text-sm text-slate-400 font-medium">
-                        <div className="flex items-center gap-2">
-                            <CheckCircle2 className="h-4 w-4 text-emerald-500" />
-                            <span>MNEE Supported</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <CheckCircle2 className="h-4 w-4 text-emerald-500" />
-                            <span>Non-Custodial</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <CheckCircle2 className="h-4 w-4 text-emerald-500" />
-                            <span>AI Powered</span>
-                        </div>
-                    </div>
+                    <div className="w-1.5 h-1.5 bg-[#2ECC8F] rounded-full animate-pulse"></div>
+                    <span className="text-[12px] text-[#2ECC8F] font-medium tracking-wide uppercase">India's First Coercion-Aware App</span>
                 </div>
 
-                {/* Visual Mockup */}
-                <div
-                    ref={mockupAnim.ref}
-                    className={`relative mx-auto w-full max-w-[500px] lg:max-w-none ${fadeIn} ${mockupAnim.isVisible ? fadeInVisible : ''}`}
-                    style={{ transitionDelay: '200ms' }}
+                <h1
+                    className="font-bebas text-[56px] md:text-[86px] leading-[0.92] tracking-wide mb-7 text-[#E8EEF8] slide-up opacity-0 [animation-delay:400ms]"
                 >
-                    <div className="relative rounded-3xl bg-slate-100 border border-slate-200 p-2 shadow-2xl hover:shadow-3xl transition-shadow duration-500 animate-float">
-                        <div className="rounded-2xl overflow-hidden bg-white">
-                            {/* Mock Interface Header */}
-                            <div className="bg-slate-50 border-b border-slate-100 p-4 flex items-center justify-between">
-                                <div className="flex items-center gap-2">
-                                    <div className="h-3 w-3 rounded-full bg-red-400"></div>
-                                    <div className="h-3 w-3 rounded-full bg-amber-400"></div>
-                                    <div className="h-3 w-3 rounded-full bg-emerald-400"></div>
-                                </div>
-                                <div className="text-xs font-medium text-slate-400">VETO Safe Protocol</div>
+                    YOUR MONEY.<br />
+                    <span className="text-[#2ECC8F]">YOUR</span><br />
+                    <span className="text-[#2260EE]">CONTROL.</span>
+                </h1>
+
+                <p
+                    className="text-[17px] text-[#8899BB] leading-[1.7] mb-11 font-light slide-up opacity-0 [animation-delay:600ms]"
+                >
+                    Banks detect <strong className="text-[#E8EEF8] font-medium">suspicious accounts.</strong> GarudPay detects <strong className="text-[#E8EEF8] font-medium">suspicious behavior.</strong> We act before the fraud occurs, not after.
+                </p>
+
+                <div
+                    className="flex flex-wrap gap-3.5 mb-14 slide-up opacity-0 [animation-delay:800ms]"
+                >
+                    <Link
+                        href="#download"
+                        className="flex items-center gap-3 bg-[#E8EEF8] text-[#060A14] px-6 py-3.5 rounded-xl hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(232,238,248,0.2)] transition-all cursor-none"
+                    >
+                        <Apple className="h-6 w-6" />
+                        <div className="leading-[1.2]">
+                            <span className="text-[10px] font-normal text-[#555] block">Download on the</span>
+                            <strong className="text-[15px] font-semibold">App Store</strong>
+                        </div>
+                    </Link>
+                    <Link
+                        href="#download"
+                        className="flex items-center gap-3 bg-[#141D33] text-[#E8EEF8] border border-[#1E2A45] px-6 py-3.5 rounded-xl hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(26,79,204,0.2)] transition-all cursor-none"
+                    >
+                        <Play className="h-6 w-6" />
+                        <div className="leading-[1.2]">
+                            <span className="text-[10px] font-normal text-[#8899BB] block">Get it on</span>
+                            <strong className="text-[15px] font-semibold">Google Play</strong>
+                        </div>
+                    </Link>
+                </div>
+
+                <div
+                    className="flex justify-center md:justify-start gap-9 slide-up opacity-0 [animation-delay:1000ms]"
+                >
+                    <div className="border-l-2 border-[#1E2A45] pl-4">
+                        <div className="font-mono text-[22px] font-medium text-[#E8EEF8]">₹7K Cr</div>
+                        <div className="text-[11px] text-[#5A7099] mt-0.5">Annual fraud in India</div>
+                    </div>
+                    <div className="border-l-2 border-[#1E2A45] pl-4">
+                        <div className="font-mono text-[22px] font-medium text-[#E8EEF8]">0 sec</div>
+                        <div className="text-[11px] text-[#5A7099] mt-0.5">Detection delay</div>
+                    </div>
+                    <div className="border-l-2 border-[#1E2A45] pl-4">
+                        <div className="font-mono text-[22px] font-medium text-[#E8EEF8]">12+</div>
+                        <div className="text-[11px] text-[#5A7099] mt-0.5">Behavioral signals</div>
+                    </div>
+                </div>
+            </div>
+
+            {/* 3D Visual on Desktop */}
+            <div className="flex-1 hidden md:flex justify-center items-center relative perspective-[1200px] slide-in opacity-0 [animation-delay:500ms]">
+                <div className="glow-ring ring1"></div>
+                <div className="glow-ring ring2"></div>
+                <div className="glow-ring ring3"></div>
+
+                {/* Floating Chips */}
+                <div className="floating-chip chip1">
+                    <span className="text-[#8899BB] block mb-0.5">Risk Score</span>
+                    <span className="text-[#2ECC8F] font-medium">▼ LOW — 12</span>
+                </div>
+                <div className="floating-chip chip2">
+                    <span className="text-[#8899BB] block mb-0.5">Vault Status</span>
+                    <span className="text-[#EE9900] font-medium">🔒 ₹45,000 held</span>
+                </div>
+                <div className="floating-chip chip3">
+                    <span className="text-[#8899BB] block mb-0.5">Signal Detected</span>
+                    <span className="text-[#2260EE] font-medium">📋 Copy-paste +25</span>
+                </div>
+
+                {/* The 3D Phone */}
+                <div className="phone-3d">
+                    <div className="w-[300px] bg-gradient-to-br from-[#1A2440] via-[#0A0F1E] to-[#060A14] rounded-[44px] border-2 border-[#2A3A5A] px-3 pb-5 pt-4 relative shadow-[0_40px_80px_rgba(0,0,0,0.8),_0_0_60px_rgba(26,79,204,0.15),_inset_0_1px_0_rgba(255,255,255,0.08),_0_0_0_1px_rgba(255,255,255,0.04)] before:absolute before:inset-0 before:rounded-[44px] before:bg-gradient-to-br before:from-[rgba(255,255,255,0.06)] before:to-transparent before:pointer-events-none">
+                        
+                        {/* Notch */}
+                        <div className="w-[90px] h-[24px] bg-[#060A14] rounded-b-[16px] mx-auto mb-2.5"></div>
+                        
+                        {/* Screen */}
+                        <div className="bg-[#0A0F1E] rounded-[28px] overflow-hidden min-h-[540px] p-2.5">
+                            
+                            {/* Status Bar */}
+                            <div className="flex justify-between px-2 pb-1.5 font-mono text-[10px] text-[#5A7099]">
+                                <span>9:41</span>
+                                <span>●●●</span>
                             </div>
-                            {/* Mock Interface Body */}
-                            <div className="p-8 space-y-6">
-                                <div className="flex items-center justify-between">
-                                    <div>
-                                        <div className="text-sm text-slate-400">Status</div>
-                                        <div className="text-xl font-bold text-emerald-600">Protected</div>
-                                    </div>
-                                    <div className="text-right">
-                                        <div className="text-sm text-slate-400">Vault Balance</div>
-                                        <div className="text-xl font-bold text-slate-900">0.00 MNEE</div>
-                                    </div>
-                                </div>
-                                <div className="p-4 bg-red-50 rounded-xl border border-red-100 flex items-start gap-4">
-                                    <div className="bg-white p-2 rounded-full shadow-sm">
-                                        <ShieldAlert className="h-6 w-6 text-red-500" />
-                                    </div>
-                                    <div>
-                                        <div className="font-bold text-red-900">Threat Blocked</div>
-                                        <div className="text-sm text-red-700 mt-1">
-                                            We intercepted a transaction to <strong>0x9f...a1</strong> due to a 'Penny Drop' signature.
-                                        </div>
-                                        <Button size="sm" variant="destructive" className="mt-3 w-full">Emergency Recall</Button>
-                                    </div>
-                                </div>
-                                <div className="text-center">
-                                    <div className="text-xs text-slate-300 font-mono">AI-AGENT-ID: VETO-8X-SENTINEL</div>
+
+                            {/* Brand */}
+                            <div className="flex items-center gap-1.5 px-2 pb-2.5">
+                                <div className="w-5 h-5 bg-[#1A4FCC] rounded-[7px] flex items-center justify-center text-[10px]">🛡</div>
+                                <span className="font-mono text-[12px] tracking-[2px] font-medium text-[#E8EEF8]">GARUDPAY</span>
+                            </div>
+
+                            <div className="text-[11px] text-[#5A7099] px-2">Namaste,</div>
+                            <div className="text-[16px] font-medium text-[#E8EEF8] px-2 pb-3">Aayushi 👋</div>
+
+                            {/* Balance Card */}
+                            <div className="mx-2 mb-3.5 bg-[#141D33] border border-[#1E2A45] rounded-2xl p-4">
+                                <div className="text-[10px] text-[#5A7099] tracking-wide uppercase mb-1">Total Balance</div>
+                                <div className="font-mono text-[26px] font-medium text-[#E8EEF8] mb-1">₹ 84,230<span className="text-[16px] text-[#5A7099]">.50</span></div>
+                                <div className="flex items-center gap-1.5 text-[10px] text-[#2ECC8F]">
+                                    <div className="w-1.5 h-1.5 bg-[#2ECC8F] rounded-full"></div>
+                                    GarudPay protection active
                                 </div>
                             </div>
+
+                            {/* Actions grid */}
+                            <div className="grid grid-cols-3 gap-2 mx-2 mb-3.5">
+                                <div className="bg-[#141D33] border border-[#1E2A45] rounded-xl py-3 px-1.5 text-center">
+                                    <div className="text-[16px] mb-1">↗</div>
+                                    <div className="text-[9px] text-[#8899BB]">Send</div>
+                                </div>
+                                <div className="bg-[#141D33] border border-[#1E2A45] rounded-xl py-3 px-1.5 text-center">
+                                    <div className="text-[16px] mb-1">↙</div>
+                                    <div className="text-[9px] text-[#8899BB]">Request</div>
+                                </div>
+                                <div className="bg-[#141D33] border border-[#1E2A45] rounded-xl py-3 px-1.5 text-center">
+                                    <div className="text-[16px] mb-1">⊞</div>
+                                    <div className="text-[9px] text-[#8899BB]">UPI QR</div>
+                                </div>
+                            </div>
+
+                            {/* Vault Alert */}
+                            <div className="mx-2 bg-gradient-to-br from-[#1A1000] to-[#141D33] border border-[#CC7700] rounded-[14px] p-3.5 flex items-center gap-2.5">
+                                <div className="w-9 h-9 bg-[rgba(238,153,0,0.1)] rounded-[10px] flex items-center justify-center text-[18px] shrink-0">🔒</div>
+                                <div className="flex-1">
+                                    <div className="text-[11px] font-medium text-[#EE9900] mb-0.5">Vault Protection Active</div>
+                                    <div className="text-[9px] text-[#5A7099] leading-[1.4]">1 payment paused · ₹15,000 held safely · 23h remaining</div>
+                                </div>
+                            </div>
+
+                        </div>
                         </div>
                     </div>
-                    {/* Decorative Elements */}
-                    <div className="absolute -bottom-6 -right-6 h-24 w-24 bg-blue-600 rounded-2xl -z-10 opacity-10 rotate-12"></div>
-                    <div className="absolute -top-6 -left-6 h-32 w-32 bg-emerald-500 rounded-full -z-10 opacity-10 blur-xl"></div>
                 </div>
             </div>
         </section>

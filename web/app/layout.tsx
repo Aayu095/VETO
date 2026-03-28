@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Sora, Bebas_Neue, DM_Mono } from "next/font/google";
 import "./globals.css";
 import '@rainbow-me/rainbowkit/styles.css';
 import { Providers } from "@/components/Providers";
 import { cn } from "@/lib/utils";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
+const sora = Sora({ subsets: ["latin"], variable: "--font-sora" });
+const bebas = Bebas_Neue({ weight: "400", subsets: ["latin"], variable: "--font-bebas" });
+const dmMono = DM_Mono({ weight: ["400", "500"], subsets: ["latin"], variable: "--font-mono" });
 
 export const metadata: Metadata = {
-  title: "VETO Protocol | The Power to Say No",
-  description: "Stop Authorized Push Payment Scams with Programmable Money.",
+  title: "GarudPay | India's First Coercion-Aware App",
+  description: "Detects suspicious behavior before the fraud occurs.",
 };
 
 export default function RootLayout({
@@ -18,8 +20,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={cn("min-h-screen bg-slate-50 font-sans antialiased", inter.variable)}>
+    <html lang="en" className="dark">
+      <body className={cn("min-h-screen bg-[#060A14] text-[#E8EEF8] font-sans antialiased", sora.variable, bebas.variable, dmMono.variable)}>
         <Providers>
           {children}
         </Providers>

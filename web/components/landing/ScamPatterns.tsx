@@ -1,6 +1,6 @@
 "use client";
 
-import { AlertTriangle, Clock, Users, Zap } from "lucide-react";
+import { AlertTriangle, Clock, PhoneCall, Zap } from "lucide-react";
 import { useScrollAnimation, fadeIn, fadeInVisible, slideUp, slideUpVisible } from "@/lib/animations";
 
 export function ScamPatterns() {
@@ -13,34 +13,34 @@ export function ScamPatterns() {
 
     const patterns = [
         {
-            name: "The Penny Drop",
-            icon: Users,
-            desc: "Scammer sends a tiny amount (e.g., 1 MNEE) to build false trust before asking for a large sum.",
-            stat: "Detected in 100% of Honey-Trap scams",
+            name: "The Dictated Number",
+            icon: PhoneCall,
+            desc: "The app detects when an account number is pasted directly from the clipboard immediately after an unknown phone call.",
+            stat: "Strongest indicator of coercion",
             anim: card1Anim,
             delay: "100ms"
         },
         {
-            name: "Hyper-Urgency",
+            name: "The Rushed Confirm",
             icon: Clock,
-            desc: "Transactions sent within seconds of pasting an address. High panic indicator.",
-            stat: "Common in Social Engineering attacks",
+            desc: "User clicks 'Confirm' in 1.3 seconds on a screen that takes 12 seconds to read. Scammers demand urgency; we detect it.",
+            stat: "Intercepts Social Engineering",
             anim: card2Anim,
             delay: "200ms"
         },
         {
-            name: "The Double Dip",
+            name: "The Penny Drop",
             icon: Zap,
-            desc: "Sending the exact same amount twice in 5 minutes. Often caused by 'Fake Error' messages.",
-            stat: "Prevents accidental duplicate payments",
+            desc: "Scammer sends exactly ₹1 to build false trust before demanding ₹18,000 back claiming it was a 'mistake'.",
+            stat: "Detected in 90% of Honey-Traps",
             anim: card3Anim,
             delay: "300ms"
         },
         {
-            name: "Fresh Wallet",
+            name: "The Mule Hub",
             icon: AlertTriangle,
-            desc: "Sending large sums to a wallet created less than 24 hours ago.",
-            stat: "Flagged as High Risk automatically",
+            desc: "Sending large sums to a fresh account. Our decentralized registry flags mule accounts instantly across the network.",
+            stat: "Triggers the Vault automatically",
             anim: card4Anim,
             delay: "400ms"
         },
@@ -70,7 +70,7 @@ export function ScamPatterns() {
                             <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-lg transition-shadow">
                                 <div className="text-sm font-semibold text-slate-400 uppercase tracking-wide mb-2">Real Case Study</div>
                                 <blockquote className="text-lg font-medium text-slate-900 italic">
-                                    "I received 1 Rupee from a stranger, then sent him ₹18,000. It was a trap. VETO would have seen that 1 Rupee clearly."
+                                    "I received ₹1 from a stranger, then he called and panicked me into sending ₹18,000. It was a trap. VETO's behavioral AI would have seen my hesitation and paused it."
                                 </blockquote>
                                 <div className="mt-4 text-sm font-bold text-slate-900">— Vinayak, Victim of APP Fraud</div>
                             </div>

@@ -32,12 +32,18 @@ export function useScrollAnimation(threshold = 0.1) {
     return { ref, isVisible };
 }
 
-// Animation class names
-export const fadeIn = "opacity-0 translate-y-8 transition-all duration-700 ease-out";
-export const fadeInVisible = "opacity-100 translate-y-0";
+// Animation class names based on global CSS keyframes
+export const fadeIn = "opacity-0 transition-opacity duration-700 ease-out";
+export const fadeInVisible = "opacity-100";
 
-export const slideUp = "opacity-0 translate-y-12 transition-all duration-700 ease-out";
-export const slideUpVisible = "opacity-100 translate-y-0";
+export const slideUp = "slide-up";
+export const slideUpVisible = ""; // Handled inherently by the slide-up keyframe forward fill
 
-export const scaleIn = "opacity-0 scale-95 transition-all duration-500 ease-out";
-export const scaleInVisible = "opacity-100 scale-100";
+export const reveal = "reveal";
+export const revealVisible = "visible";
+
+export const stepAnim = "step";
+export const stepAnimVisible = "visible";
+
+export const featureCardAnim = "feature-card";
+export const featureCardAnimVisible = "visible";
